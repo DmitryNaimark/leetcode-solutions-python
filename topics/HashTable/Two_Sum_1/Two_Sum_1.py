@@ -8,12 +8,12 @@ from typing import List
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         num_pos = {}
-        for i in range(len(nums)):
-            remainder = target - nums[i]
+        for i, num in enumerate(nums):
+            remainder = target - num
             if remainder in num_pos:
                 return [num_pos[remainder], i]
 
-            num_pos[nums[i]] = i
+            num_pos[num] = i
 
 
 # ---------------------------------------------------
