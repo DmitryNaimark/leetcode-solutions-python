@@ -21,9 +21,9 @@ let expect = "<Problem number>. <Problem name>",
     topicFolderName,
     // "Jewels_and_Stones_771"
     problemFolderName,
-    // "Jewels_and_Stones_771.js"
+    // "Jewels_and_Stones_771.py"
     problemFileName,
-    // "topics/HashTable/Jewels_and_Stones_771/Jewels_and_Stones_771.js"
+    // "topics/HashTable/Jewels_and_Stones_771/Jewels_and_Stones_771.py"
     problemFileFullPath,
     // Used only if Problem Folder already exists.
     // "topics/HashTable/Jewels_and_Stones_771/"
@@ -76,15 +76,15 @@ rl.on('line', (line) => {
             problemFolderName = `${problemNameUnderscores}_${problemNumber}`;
             createProblemFolder();
             
-            // Create Problem file (using "templateSolution.js" as a template).
-            problemFileName = `${problemFolderName}.js`;
+            // Create Problem file (using "templateSolution.py" as a template).
+            problemFileName = `${problemFolderName}.py`;
             problemFileFullPath = `topics/${topicFolderName}/${problemFolderName}/${problemFileName}`;
-            copyFile("templateSolution.js", problemFileFullPath, function(exception) {
+            copyFile("templateSolution.py", problemFileFullPath, function(exception) {
                 if (exception) {
                     throw exception;
                 }
     
-                console.log(`"templateSolution.js" was copied to ${problemFileFullPath}`);
+                console.log(`"templateSolution.py" was copied to ${problemFileFullPath}`);
     
                 // Add URL inside the Problem file.
                 replaceUrlInProblemFile();
@@ -107,14 +107,14 @@ rl.on('line', (line) => {
         
         let descriptionInBracketsUnderscores = line.replace(/ /g, '_');
         
-        let problemFileName = `[${descriptionInBracketsUnderscores}]_${problemFolderName}.js`;
+        let problemFileName = `[${descriptionInBracketsUnderscores}]_${problemFolderName}.py`;
         problemFileFullPath = `${problemFolderFullPath}/${problemFileName}`;
-        copyFile("templateSolution.js", problemFileFullPath, function(exception) {
+        copyFile("templateSolution.py", problemFileFullPath, function(exception) {
             if (exception) {
                 throw exception;
             }
     
-            console.log(`"templateSolution.js" was copied to ${problemFileFullPath}`);
+            console.log(`"templateSolution.py" was copied to ${problemFileFullPath}`);
     
             // Add URL inside the Problem file.
             replaceUrlInProblemFile();

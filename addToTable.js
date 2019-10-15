@@ -36,14 +36,14 @@ let difficultyColumn,
     // `HashTable`, `DP`, `Reverse`, `Palindrome`
     tagsColumn,
     // If there are several "My solutions", there will be space between them.
-    // [![Some tooltip if needed](./images/solution.png)](HashTable/Jewels_and_Stones_771/Jewels_and_Stones_771.js)
+    // [![Some tooltip if needed](./images/solution.png)](HashTable/Jewels_and_Stones_771/Jewels_and_Stones_771.py)
     mySolutionsColumn,
     // [![](./images/solution.png)](https://leetcode.com/problems/jewels-and-stones/solution/)
     leetCodeSolutionColumn,
     // Single string, where each solution is separated by ", <br><br>"
     // 1) [Generating permut-s in descending order](https://leetcode.com/problems/largest-time-for-given-digits/discuss/201564/C%2B%2B-4-lines-0-ms-prev_permutation), <br><br>
     // 2) [Using 3 for loops instead of permut-s](https://leetcode.com/problems/largest-time-for-given-digits/discuss/200693/Java-11-liner-O(64)-w-comment-6-ms.), <br><br>
-    // 3) [Interesting idea with limits in separate array](Array/Largest_Time_for_Given_Digits_949/[NOT_MINE_Interesting_idea_with_limits]_Largest_Time_for_Given_Digits_949.js)
+    // 3) [Interesting idea with limits in separate array](Array/Largest_Time_for_Given_Digits_949/[NOT_MINE_Interesting_idea_with_limits]_Largest_Time_for_Given_Digits_949.py)
     otherCoolSolutionsColumn,
     // Comment, which will help to determine in the future how much attention should be paid while resolving the problem.
     solvedOnMyOwnColumn,
