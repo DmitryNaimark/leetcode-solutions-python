@@ -1,0 +1,37 @@
+{
+  "name": "leetcode-solutions-python",
+  "version": "1.0.0",
+  "description": "LeetCode solutions in Python, Progress Table in README.md",
+  "main": "README.md",
+  "scripts": {
+    "add-solution": "node addSolution",
+    "add-to-table": "node addToTable"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmitryNaimark/leetcode-solutions-python.git"
+  },
+  "keywords": [
+    "leetcode",
+    "programming",
+    "problems",
+    "solutions",
+    "algorithms",
+    "data-structures",
+    "progress",
+    "table",
+    "python"
+  ],
+  "author": "Dmitry Naimark",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DmitryNaimark/leetcode-solutions-python/issues"
+  },
+  "homepage": "https://github.com/DmitryNaimark/leetcode-solutions-python#readme",
+  "dependencies": {
+    "replace-in-file": "^4.1.0"
+  },
+  "devDependencies": {
+    "klaw-sync": "^6.0.0"
+  }
+}
