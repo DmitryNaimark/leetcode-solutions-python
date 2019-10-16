@@ -9,6 +9,7 @@ Feel free to Fork, Clone or Star this repository.
 | Difficulty | Title | Tags | My Solutions | LeetCode Solution | Other cool solutions | Solved on my own? | Date |
 |:----------:|-------|------|:------------:|:-----------------:|:--------------------:|:-----------------:|:----:|
 | ![][easy] | [1. Two Sum](https://leetcode.com/problems/two-sum/description/) | `HashTable`, `Array` | [![](./images/solution.png)](topics/HashTable/Two_Sum_1/Two_Sum_1.py) | [![](./images/solution.png)](https://leetcode.com/problems/two-sum/solution/) |  | Simple HashTable | `2019-10-15`
+| ![][easy] | [276. Paint Fence](https://leetcode.com/problems/paint-fence/description/) | `DP`, `Probability`, `Math` | [![](./images/solution.png)](topics/DynamicProgramming/Paint_Fence_276/Paint_Fence_276.py) | - | 1) [Decent explanation](https://leetcode.com/problems/paint-fence/discuss/71156/O(n)-time-java-solution-O(1)-space) | Probability, DP | `2019-10-16`
 <!-- Placeholder Helper for new solutions(used to programmaticaly insert new solutions here) -->
 
 
