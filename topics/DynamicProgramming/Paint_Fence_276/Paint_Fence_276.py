@@ -27,4 +27,5 @@ class Solution:
 #                    Test Cases
 # ---------------------------------------------------
 solution = Solution()
+# 6
 print(solution.numWays(3, 2))
