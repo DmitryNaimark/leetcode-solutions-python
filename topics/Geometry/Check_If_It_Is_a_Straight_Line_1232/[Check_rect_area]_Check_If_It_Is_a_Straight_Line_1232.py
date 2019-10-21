@@ -8,12 +8,12 @@ class Solution:
     def checkStraightLine(self, coordinates: List[List[int]]) -> bool:
         (p, q), (u, v) = coordinates[:2]
 
-        return all(self.rectArea(x, y, p, q, u, v) for x, y in coordinates[2:])
+        return all(self.rectArea(x, y, p, q, u, v) == 0 for x, y in coordinates[2:])
 
     def rectArea(self, x1, y1, x2, y2, x3, y3):
         # Formula for Rectangle Area:
         # S = 0.5 * x1(y2 - y3) + x2(y3 - y2) + x3(y1 - y2)
-        return x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2) == 0
+        return x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2)
 
 
 # ---------------------------------------------------
