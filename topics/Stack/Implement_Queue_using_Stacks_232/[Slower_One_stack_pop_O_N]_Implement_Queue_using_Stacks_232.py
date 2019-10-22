@@ -10,6 +10,7 @@ from collections import deque
 #     empty: O(1)
 # Space Complexity: O(N)
 class MyQueue:
+
     def __init__(self):
         """
         Initialize your data structure here.
@@ -34,14 +35,13 @@ class MyQueue:
             temp_stack.append(self.s1.pop())
 
         popped = temp_stack.pop()
+        if temp_stack:
+            self.front = temp_stack[-1]
+        else:
+            self.front = None
 
         while temp_stack:
             self.s1.append(temp_stack.pop())
-
-        if self.s1:
-            front = self.s1[-1]
-        else:
-            front = None
 
         return popped
 
