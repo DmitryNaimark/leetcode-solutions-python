@@ -44,7 +44,7 @@ def createBinaryTreeFromArray(arr):
                 q.append(node.left)
             i += 1
 
-            if arr[i] is not None:
+            if i < len(arr) and arr[i] is not None:
                 node.right = TreeNode(arr[i])
                 q.append(node.right)
             i += 1
