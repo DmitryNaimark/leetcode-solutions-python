@@ -5,7 +5,7 @@ Solutions are grouped by Topics(see `topics` folder).
 
 Feel free to Fork, Clone or Star this repository.  
 
-Also, check out [my JavaScript Repo](https://github.com/DmitryNaimark/leetcode-solutions), which contains JS solutions for all problems below and a lot more.
+Also, check out [my JavaScript Repository](https://github.com/DmitryNaimark/leetcode-solutions), which contains JS solutions for all problems below and a lot more.
 <br />
 
 | Difficulty | Title | Tags | My Solutions | LeetCode Solution | Other cool solutions | Solved on my own? | Date |
