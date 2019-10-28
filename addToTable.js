@@ -8,7 +8,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-let expect = "Problem name",
+let expect = "Is it latest changed folder",
     // ...\leetcode-solutions\topics\HashTable\Jewels_and_Stones_771
     problemFolderFullPath,
     // "771"
@@ -50,11 +50,23 @@ let difficultyColumn,
     // Date when this Problem was added to README.md.
     dateColumn;
 
-console.log(`Enter solved Problem Name (without problem number. Can be partial unique name)`);
+let latestChangedFolderPath = findLatestChangedFolder();
+
+console.log(`\nIs this the solution folder you want to add to README.md table? ("y"/Enter - yes, anything else - no`);
+console.log(latestChangedFolderPath);
 
 rl.on('line', (line) => {
-    // Expects "Jewels and Stones" or "Jewels_and_Stones".
-    if (expect === "Problem name") {
+    if (expect === 'Is it latest changed folder') {
+        if (line === '' || line[0].toLowerCase() === 'y') {
+            problemFolderFullPath = latestChangedFolderPath;
+            expect = "Difficulty";
+        } else {
+            console.log(`Enter solution folder Name(Can be partial name if it's unique)`);
+            expect = "Problem name"
+        }
+    }
+    // Expects "Jewels and Stones" or "Jewels_and_Stones", or "Jewels and Stones 771" or any partial unique solution folder name.
+    else if (expect === "Problem name") {
         // Find Problem Folder
         problemFolderFullPath = findProblemFolder(line);
         
@@ -274,6 +286,24 @@ function findProblemFolder(problemName) {
         // console.log('foundProblemDir.path', foundProblemDir.path);
         return foundProblemDir.path;
     }
+}
+
+// Returns full path for folder, which was changed the latest(file inside of it was changed).
+// This way we can use an assumption that user wants to add latest changed solution to the README.md table.
+function findLatestChangedFolder() {
+    let dirs = klawSync('./topics', {nofile: true, depthLimit: 1});
+
+    let latestChangeMs,
+        latestChangedFolder;
+
+    for (let dir of dirs) {
+        if (latestChangeMs == null || latestChangeMs < dir.stats.ctimeMs) {
+            latestChangeMs = dir.stats.ctimeMs;
+            latestChangedFolder = dir
+        }
+    }
+
+    return latestChangedFolder.path;
 }
 
 // Exits NodeJS Application.
