@@ -127,26 +127,14 @@ rl.on('line', (line) => {
         mySolutionsPaths = problemFilesFullPaths.map(function(fullPath) {
             let relativePath = fullPath.substring(fullPath.indexOf('topics'));
             // Replace '\' with '/'
-            return relativePath.replace(/\\/g, '/')
+            return relativePath.replace(/\\/g, '/');
         });
         mySolutionsFileNames = mySolutionsPaths.map((fullPath) => fullPath.substring(fullPath.lastIndexOf('/') + 1));
         
         mySolutionsColumn = '';
-        console.log(`\nEnter Tooltip for file "${mySolutionsFileNames[0]}" (when hovering over solution icon)`);
-        expect = "MySolution Tooltip";
-    } else if (expect === "MySolution Tooltip") {
-        mySolutionsColumn += `[![${line}](./images/solution.png)](${mySolutionsPaths[0]})`;
-    
-        mySolutionsPaths.shift();
-        mySolutionsFileNames.shift();
-        
-        if (mySolutionsPaths.length > 0) {
-            mySolutionsColumn += ' ';
-            console.log(`Enter Tooltip for file "${mySolutionsFileNames[0]}" (when hovering over solution icon)`);
-        } else {
-            console.log('\nIs there official LeetCode solution for this problem? (yes(y) / no(n))');
-            expect = "Is there official LeetCode solution answer";
-        }
+
+        console.log('\nIs there official LeetCode solution for this problem? (yes(y) / no(n))');
+        expect = "Is there official LeetCode solution answer";
     } else if (expect === "Is there official LeetCode solution answer") {
         // If official solution exists, generate URL for it.
         if (line[0] === 'y') {
