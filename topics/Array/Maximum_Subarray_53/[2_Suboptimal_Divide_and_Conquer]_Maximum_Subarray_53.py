@@ -2,8 +2,8 @@
 # ---------------------------------------------------
 from typing import List
 
-# Runtime Complexity: O(N)
-# Space Complexity: O(1)
+# Runtime Complexity: O(N * log(N))
+# Space Complexity: O(log(N)) for callstack
 class Solution:
     def cross_sum(self, nums, left, right, p):
         if left == right:
